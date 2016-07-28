@@ -85,6 +85,21 @@ server.register(plugins, (err) => {
       });
     }
   });
+  server.route({
+    method: 'GET',
+    path: '/gotouser',
+    handler: function(request, reply) {
+      if (request.state.session) {
+      req
+        .get('https://github.com/user')
+        .on('response', function(response) {
+           reply(response);
+        });
+      } else {
+        reply.redirect('/');
+      }
+    }
+  });
 });
 server.start((err) => {
   console.log(`Server is running on: ${server.info.uri}`);
