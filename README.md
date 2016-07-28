@@ -6,6 +6,6 @@ This repo completes the tutorial that can be found [here](https://foundersandcod
 
 Github's OAuth documentation was consulted to complete this exercise and can be found [here](https://developer.github.com/v3/oauth/).
 
-Current Goals
+## Current Goals
 
 * Learn how to encrypt cookies and properly authenticate their contents to make the access_token storage more secure.
